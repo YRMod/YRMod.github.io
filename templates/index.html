@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ software_name }} - {{ software_version }}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>{{ software_name }}</h1>
+        <p>版本：{{ software_version }}</p>
+    </header>
+    
+    <main>
+        <section class="hero">
+            <h2>欢迎使用 {{ software_name }}</h2>
+            <p>{{ software_name }} 是一款功能强大的软件，帮助你更高效地完成工作。</p>
+            <a href="{{ download_link }}" class="download-btn">立即下载</a>
+        </section>
+        
+        <section class="features">
+            <h2>主要功能</h2>
+            <ul>
+                <li>高效的数据处理</li>
+                <li>简洁易用的界面</li>
+                <li>跨平台支持</li>
+                <li>定期更新维护</li>
+            </ul>
+        </section>
+        
+        <section class="screenshots">
+            <h2>软件截图</h2>
+            <div class="screenshot-container">
+                <img src="{{ url_for('static', filename='images/screenshot.png') }}" alt="软件截图">
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; 2023 {{ software_name }}</p>
+    </footer>
+    
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
